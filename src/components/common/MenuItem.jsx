@@ -8,7 +8,7 @@ function MenuItem({ icon, title, submenu, path }) {
       }`}
     >
       <div className="flex gap-4 items-center">
-        {icon} <h2 className="text-lg font-bold">{title}</h2>
+        <i>{icon}</i> <h2 className="text-lg font-bold">{title}</h2>
       </div>
       {submenu && (
         <svg

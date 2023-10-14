@@ -1,13 +1,7 @@
-import Main from "./components/Main";
-import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
 
 function App() {
-  return (
-    <div className="flex ">
-      <Sidebar />
-      <Main />
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
