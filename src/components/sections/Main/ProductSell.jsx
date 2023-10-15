@@ -26,6 +26,7 @@ function ProductSell() {
     const categories = data.map((product) => {
       return { label: product.category, value: product.category };
     });
+    categories.unshift({ label: "--- Select Category ---", value: "" });
     setOptions(
       categories.filter((cat, index) => {
         return index === categories.findIndex((c) => cat.label === c.label);
@@ -72,12 +73,12 @@ function ProductSell() {
           <SearchBar
             className="bg-slate-100 text-slate-600  max-md:w-full"
             ref={inputRef}
-            handleSearchQuery={handleSearchQuery}
+            onChange={handleSearchQuery}
           />
           <Select
             ref={selectRef}
             options={options}
-            handleCategoryChange={handleCategoryChange}
+            onChange={handleCategoryChange}
             className="bg-slate-100 text-slate-600 max-md:w-full"
           />
         </div>

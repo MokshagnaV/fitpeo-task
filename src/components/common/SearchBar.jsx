@@ -1,9 +1,6 @@
 import { forwardRef } from "react";
 
-const SearchBar = forwardRef(function SearchBar(
-  { handleSearchQuery, className },
-  ref
-) {
+const SearchBar = forwardRef(function SearchBar({ onChange, className }, ref) {
   return (
     <div className="relative max-md:w-full">
       <svg
@@ -26,7 +23,7 @@ const SearchBar = forwardRef(function SearchBar(
         type="text"
         placeholder="Search"
         ref={ref}
-        onChange={handleSearchQuery}
+        onChange={onChange}
       />
     </div>
   );
